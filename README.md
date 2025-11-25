@@ -20,22 +20,65 @@ Built with **Node.js** and **PostgreSQL**, it follows modern backend best practi
 ## 📂 Project Structure
 
 ```bash
-community-api-backend/
-├── src/
-│   ├── app.js             # Express app setup
-│   ├── server.js          # Server entry point
-│   ├── routes/            # API route definitions
-│   │   └── index.js       # Main router entry
-│   ├── controllers/       # Request handlers (business logic entry)
-│   ├── services/          # Core business logic layer
-│   ├── models/            # Database models (MVP: placeholders)
-│   ├── middleware/        # Custom middlewares
-│   └── utils/             # Helper functions
-├── tests/                 # Unit and integration tests
-├── .env                   # Local environment variables (not committed)
-├── .env.example           # Example environment variables
-├── nodemon.json           # Dev server config
-└── package.json
+Community-API-Backend/
+├─ src/
+│  ├─ app.js               # Express app setup, middleware configuration
+│  ├─ server.js            # Server entry point, starts the application
+│  ├─ config/
+│  │  ├─ env.js            # Environment configuration and validation
+│  │  └─ database.js       # Database connection configuration
+│  ├─ db/
+│  │  ├─ models/           # Database models (MVP: placeholders)
+│  │  │  ├─ User.js        # User model schema
+│  │  │  ├─ Post.js        # Post/Content model schema  
+│  │  │  ├─ Community.js   # Community model schema
+│  │  │  └─ index.js       # Models initialization and associations
+│  │  ├─ migrations/       # Database migration files
+│  │  └─ seeders/          # Database seed data for development
+│  ├─ routes/              # API route definitions
+│  │  ├─ auth.js           # Authentication routes
+│  │  ├─ users.js          # User management routes
+│  │  ├─ communities.js    # Community management routes
+│  │  ├─ posts.js          # Post/content routes
+│  │  └─ index.js          # Main router entry, combines all routes
+│  ├─ controllers/         # Request handlers (business logic entry)
+│  │  ├─ authController.js # Authentication logic
+│  │  ├─ userController.js # User management logic
+│  │  ├─ communityController.js # Community operations
+│  │  └─ postController.js # Post/content operations
+│  ├─ services/            # Core business logic layer
+│  │  ├─ authService.js    # Authentication business logic
+│  │  ├─ userService.js    # User-related business logic
+│  │  ├─ communityService.js # Community business logic
+│  │  └─ postService.js    # Post/content business logic
+│  ├─ middlewares/         # Custom middlewares
+│  │  ├─ auth.js           # Authentication middleware
+│  │  ├─ validation.js     # Request validation middleware
+│  │  ├─ errorHandler.js   # Global error handling
+│  │  └─ logger.js         # Request logging
+│  ├─ utils/               # Helper functions
+│  │  ├─ constants.js      # Application constants
+│  │  ├─ helpers.js        # Generic helper functions
+│  │  ├─ validators.js     # Validation schemas and functions
+│  │  └─ logger.js         # Logging utility
+│  └─ tests/               # Unit and integration tests
+│     ├─ unit/             # Unit tests
+│     │  ├─ controllers/
+│     │  ├─ services/
+│     │  └─ utils/
+│     ├─ integration/      # Integration tests
+│     │  ├─ api/
+│     │  └─ db/
+│     └─ fixtures/         # Test data fixtures
+├─ .env                    # Local environment variables (not committed)
+├─ .env.example            # Example environment variables
+├─ nodemon.json            # Dev server config
+├─ package.json            # Project dependencies and scripts
+├─ README.md               # Project documentation
+├─ .gitignore              # Git ignore rules
+├─ .eslintrc.js            # ESLint configuration
+├─ .prettierrc             # Prettier code formatting config
+└─ jsconfig.json           # JavaScript project configuration
 
 ```
 
