@@ -8,7 +8,7 @@ We’re excited that you’re interested in contributing! Follow these steps to 
 2. **Clone** your fork to your local machine:
 
 ```bash
-git clone https://github.com/devbyte-community/community-api-backend.git
+git clone https://github.com/ksa-community/community-api-backend.git
 ```
 
 Create a branch for your feature or bug fix:
