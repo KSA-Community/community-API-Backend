@@ -46,7 +46,7 @@ community-api-backend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ksa-Community/community-api-backend.git
+git clone https://github.com/KSA-Community/community-api-backend.git
 cd community-api-backend
 ```
 
