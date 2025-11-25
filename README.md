@@ -46,7 +46,7 @@ community-api-backend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/KSA-Community/community-api-backend.git
+git clone https://github.com/ksa-Community/community-api-backend.git
 cd community-api-backend
 ```
 
@@ -66,7 +66,7 @@ Create a .env file in the project root based on .env.example.
 env
 APP_PORT=8000
 NODE_ENV=development
-DATABASE_URL=postgresql://user:password@localhost:5432/devbyte
+DATABASE_URL=postgresql://user:password@localhost:5432/ksa
 JWT_SECRET=your_secret_key
 ```
 
